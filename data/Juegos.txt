@@ -1,0 +1,25 @@
+The Legend of Zelda: Breath of the Wild;2017;Acción y aventuras;E;Nintendo Switch
+Super Mario Odyssey;2017;Plataformas;E;Nintendo Switch
+Red Dead Redemption 2;2018;Acción y aventuras;M;PS3
+The Witcher 3: Wild Hunt;2015;Rol;M;PC
+FIFA 22;2021;Deportes;E;PS3
+Grand Theft Auto V;2013;Acción;M;PC
+Minecraft;2011;Sandbox;E;PC
+Overwatch;2016;Disparos en primera persona;T;PC
+Animal Crossing: New Horizons;2020;Simulación de vida;E;Nintendo Switch
+Cyberpunk 2077;2020;Rol;M;PC
+Assassin's Creed Valhalla;2020;Acción y aventuras;M;Xbox Series X
+Spider-Man: Miles Morales;2020;Acción y aventuras;T;PS3
+Mortal Kombat 11;2019;Lucha;M;PC
+Hades;2020;Roguelike;T;PC
+Among Us;2018;Multijugador en línea;E;PC
+Splatoon 2;2017;Disparos en tercera persona;E10+;Nintendo Switch
+Ghost of Tsushima;2020;Acción y aventuras;M;PS3
+The Elder Scrolls V: Skyrim;2011;Rol;M;PC
+Apex Legends;2019;Battle Royale;T;PC
+DOOM Eternal;2020;Disparos en primera persona;M;PC
+Pokémon Espada;2019;RPG;E;Nintendo Switch
+Luigi's Mansion 3;2019;Acción;E;Nintendo Switch
+Star Wars Jedi: Fallen Order;2019;Acción y aventuras;T;PS3
+Stardew Valley;2016;Simulación de vida;E;PC
+Rainbow Six Siege;2015;Disparos en primera persona;M;PC

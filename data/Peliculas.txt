@@ -1,0 +1,25 @@
+The Dark Knight;2008;Acción y Drama;R;152 minutos
+Inception;2010;Ciencia ficción y Acción;PG-13;148 minutos
+Jurassic Park;1993;Ciencia ficción y Aventura;PG-13;127 minutos
+Forrest Gump;1994;Drama y Romance;PG-13;142 minutos
+The Shawshank Redemption;1994;Drama;R;142 minutos
+Pulp Fiction;1994;Crimen y Drama;R;154 minutos
+The Matrix;1999;Ciencia ficción y Acción;R;136 minutos
+Gladiator;2000;Acción y Drama;R;155 minutos
+Titanic;1997;Drama y Romance;PG-13;195 minutos
+Avatar;2009;Ciencia ficción y Aventura;PG-13;162 minutos
+The Godfather;1972;Crimen y Drama;R;175 minutos
+Fight Club;1999;Drama; R;139 minutos
+Regreso al Futuro;1985;Ciencia Ficción;PG;116 minutos
+The Silence of the Lambs;1991;Crimen y Thriller;R;118 minutos
+Interstellar;2014;Ciencia ficción y Drama;PG-13;169 minutos
+The Grand Budapest Hotel;2014;Comedia y Drama;R;99 minutos
+The Revenant;2015;Aventura y Drama;R;156 minutos
+La La Land;2016;Musical y Romance;PG-13;128 minutos
+Mad Max: Fury Road;2015;Acción y Aventura;R;120 minutos
+Inglourious Basterds;2009;Bélico y Drama;R;153 minutos
+El Rey León;1994;Animación;G;88 minutos
+E.T. el Extraterrestre;1982;Familia;PG;115 minutos
+El Viaje de Chihiro;2001;Animación;PG;125 minutos
+El Hombre Araña: Un Nuevo Universo;2018;Animación;PG;117 minutos
+El Pianista;2002;Biografía;R;150 minutos
