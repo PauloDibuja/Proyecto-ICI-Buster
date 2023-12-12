@@ -1,4 +1,5 @@
 using System;
+using Rating;
 
 namespace BlockBuster
 {
@@ -6,6 +7,7 @@ namespace BlockBuster
    public List<Pelicula> archivoPeliculas(string archivo){
 
         List<Pelicula> peliculas = new List<Pelicula> ();
+        RatingInfo ratingInfo = new RatingInfo();
 
         String? linea;
             try{
@@ -16,8 +18,8 @@ namespace BlockBuster
                     string[] datos;
                     datos = linea.Split(";");
 
-                    if (datos.Length == 5){
-                        Pelicula pelicula = new Pelicula(datos[0], Convert.ToInt32(datos[1]), datos[2], datos[3], datos[4]);
+                    if (datos.Length == 7){
+                        Pelicula pelicula = new Pelicula(datos[0], datos[1], Convert.ToInt32(datos[2]), datos[3], ratingInfo.MPA_Ratings[datos[4]], datos[5], Convert.ToInt32(datos[6]));
                         peliculas.Add(pelicula);
                     }
                     linea = sr.ReadLine();

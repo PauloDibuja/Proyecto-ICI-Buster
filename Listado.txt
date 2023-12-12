@@ -1,0 +1,38 @@
+-> Producto listo
+-> Pelicula y Juego listo
+-> Archivos Peliculas y Juegos listo
+-> Clasificación (Rating) listo
+-> Cliente listo
+-> Inventario (casi)
+
+-> Arrendar
+    -> Elegir Peliculas o Juegos
+    -> Verificar disponibilidad
+    -> Precio final
+    -> Pagar
+    -> Asignar día de devolución (Registrarlo)
+
+-> Comprar
+    -> Elegir Películas o Juegos
+    -> Verificar disponibilidad
+    -> Precio Final
+    -> Pagar
+
+-> Devolver
+    -> Verificar si devolvió a tiempo
+        -> Si es así, no pasa nada
+        -> Si no, se aplica multa. (Sin consultar metodo, solo imprimir mensaje)
+
+-> Ver Productos (casi)
+    -> Desplegar páginas con películas y juegos disponibles.
+
+-> Recomendar Producto Principal
+    -> Buscar una lista entre los productos, uno que tenga cierta característica.
+        -> Juego:
+            -> Por Género
+            -> Por Plataforma
+        -> Pelicula: 
+            -> Por Género 
+
+
+-> Metodo Pago

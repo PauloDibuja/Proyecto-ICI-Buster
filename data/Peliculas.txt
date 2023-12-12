@@ -1,25 +1,50 @@
-The Dark Knight;2008;Acción y Drama;R;152 minutos
-Inception;2010;Ciencia ficción y Acción;PG-13;148 minutos
-Jurassic Park;1993;Ciencia ficción y Aventura;PG-13;127 minutos
-Forrest Gump;1994;Drama y Romance;PG-13;142 minutos
-The Shawshank Redemption;1994;Drama;R;142 minutos
-Pulp Fiction;1994;Crimen y Drama;R;154 minutos
-The Matrix;1999;Ciencia ficción y Acción;R;136 minutos
-Gladiator;2000;Acción y Drama;R;155 minutos
-Titanic;1997;Drama y Romance;PG-13;195 minutos
-Avatar;2009;Ciencia ficción y Aventura;PG-13;162 minutos
-The Godfather;1972;Crimen y Drama;R;175 minutos
-Fight Club;1999;Drama; R;139 minutos
-Regreso al Futuro;1985;Ciencia Ficción;PG;116 minutos
-The Silence of the Lambs;1991;Crimen y Thriller;R;118 minutos
-Interstellar;2014;Ciencia ficción y Drama;PG-13;169 minutos
-The Grand Budapest Hotel;2014;Comedia y Drama;R;99 minutos
-The Revenant;2015;Aventura y Drama;R;156 minutos
-La La Land;2016;Musical y Romance;PG-13;128 minutos
-Mad Max: Fury Road;2015;Acción y Aventura;R;120 minutos
-Inglourious Basterds;2009;Bélico y Drama;R;153 minutos
-El Rey León;1994;Animación;G;88 minutos
-E.T. el Extraterrestre;1982;Familia;PG;115 minutos
-El Viaje de Chihiro;2001;Animación;PG;125 minutos
-El Hombre Araña: Un Nuevo Universo;2018;Animación;PG;117 minutos
-El Pianista;2002;Biografía;R;150 minutos
+PP001;El Padrino;1972;Drama;R;175;10
+PP002;Star Wars: Episodio IV - Una nueva esperanza;1977;Ciencia Ficción;PG;121;8
+PP003;E.T. el Extraterrestre;1982;Aventura;PG;115;6
+PP004;Blade Runner;1982;Cine Negro;R;117;5
+PP005;El Club de la Pelea;1999;Drama;R;139;7
+PP006;Matrix;1999;Acción;R;136;9
+PP007;El Señor de los Anillos: La Comunidad del Anillo;2001;Fantasía;PG13;178;12
+PP008;Ciudad de Dios;2002;Crimen;R;130;4
+PP009;El Laberinto del Fauno;2006;Fantasía;R;118;7
+PP010;Brokeback Mountain;2005;Romance;R;134;5
+PP011;Ratatouille;2007;Animación;G;111;6
+PP012;El Caballero de la Noche;2008;Acción;PG13;152;8
+PP013;La Red Social;2010;Biografía;PG13;120;4
+PP014;Inception;2010;Ciencia Ficción;PG13;148;10
+PP015;Intocable;2011;Comedia Dramática;R;112;5
+PP016;Gravity;2013;Ciencia Ficción;PG13;91;7
+PP017;La Gran Belleza;2013;Drama;R;141;4
+PP018;Birdman;2014;Comedia Dramática;R;119;6
+PP019;Mad Max: Furia en el Camino;2015;Acción;R;120;8
+PP020;El Renacido;2015;Aventura;R;156;5
+PP021;La La Land;2016;Musical;PG13;128;9
+PP022;Moonlight;2016;Drama;R;111;6
+PP023;Coco;2017;Animación;PG;105;7
+PP024;Get Out;2017;Terror;R;104;5
+PP025;Pantera Negra;2018;Superhéroes;PG13;134;10
+PP026;Roma;2018;Drama;R;135;6
+PP027;Bohemian Rhapsody;2018;Biografía;PG13;134;7
+PP028;Parasite;2019;Drama;R;132;6
+PP029;Joker;2019;Thriller Psicológico;R;122;8
+PP030;1917;2019;Bélica;R;119;5
+PP031;Soul;2020;Animación;PG;100;7
+PP032;Tenet;2020;Ciencia Ficción;PG13;150;9
+PP033;Nomadland;2020;Drama;R;107;6
+PP034;Minari;2020;Drama;PG13;115;5
+PP035;Una Mujer Fantástica;2017;Drama;R;104;4
+PP036;La Casa de Papel;2017;Crimen;NC17;70;3
+PP037;El Ciudadano Ilustre;2016;Comedia Dramática;R;118;5
+PP038;El Ángel;2018;Crimen;R;118;6
+PP039;No Manches Frida;2016;Comedia;PG13;100;4
+PP040;El Secreto de sus Ojos;2009;Thriller;R;129;7
+PP041;Y Tu Mamá También;2001;Drama;R;106;5
+PP042;Relatos Salvajes;2014;Comedia Negra;R;122;6
+PP043;Amores Perros;2000;Drama;R;154;8
+PP044;Volver al Futuro;1985;Ciencia Ficción;PG;116;7
+PP045;Diarios de Motocicleta;2004;Biografía;R;126;5
+PP046;El Clan;2015;Crimen;R;110;4
+PP047;Un Lugar en Silencio;2018;Terror;PG13;90;6
+PP048;El Hoyo;2019;Ciencia Ficción;NC17;94;5
+PP049;El Árbol de la Sangre;2018;Romance;NC17;130;4
+PP050;Roma;2018;Drama;R;135;6
