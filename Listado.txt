@@ -23,7 +23,7 @@
         -> Si es así, no pasa nada
         -> Si no, se aplica multa. (Sin consultar metodo, solo imprimir mensaje)
 
--> Ver Productos (casi)
+-> Ver Productos (listo)
     -> Desplegar páginas con películas y juegos disponibles.
 
 -> Recomendar Producto Principal

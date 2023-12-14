@@ -23,6 +23,5 @@ namespace BlockBuster{
             get { return esrb_rating; }
             set { esrb_rating = value; }
         }
-
     }
 }

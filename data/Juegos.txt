@@ -19,7 +19,7 @@ PV018;Overwatch;2016;Disparos en primera persona;T;PlayStation 4;9
 PV019;The Witcher 3: Wild Hunt;2015;RPG;M;PC;12
 PV020;Dark Souls;2011;Acción-RPG;M;Xbox 360;7
 PV021;God of War;2018;Acción-Aventura;M;PlayStation 4;10
-PV022;Fortnite;2017;Battle Royale;T;Nintendo Switch;8
+PV022;Portal;2007;Disparos en primera persona;T;PC;8
 PV023;Persona 5;2016;RPG;M;PlayStation 4;9
 PV024;Animal Crossing: New Horizons;2020;Simulación social;E;Nintendo Switch;10
 PV025;Super Mario Odyssey;2017;Plataformas;E10;Nintendo Switch;11

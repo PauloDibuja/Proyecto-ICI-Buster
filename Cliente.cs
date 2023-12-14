@@ -5,7 +5,7 @@ namespace BlockBuster{
         private string? nombre;
         private int edad;
         private string? direccion;
-        private int telefono;
+        private string? telefono;
 
 
 
@@ -21,5 +21,25 @@ namespace BlockBuster{
 
         }
         
+        public string? Nombre{
+            get {return this.nombre;}
+            set {this.nombre = value;}
+        }
+
+
+        public int Edad{
+            get { return this.edad; }
+            set { this.edad = value; }
+        }
+
+        public string? Direccion{
+            get {return this.direccion;}
+            set {this.direccion = value;}
+        }
+
+        public string? Telefono{
+            get { return this.telefono; }
+            set { this.telefono = value; }
+        }        
     }
 }

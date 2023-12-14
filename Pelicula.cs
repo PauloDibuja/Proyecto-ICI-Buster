@@ -22,5 +22,9 @@ namespace BlockBuster{
             set { mpa_rating = value; }
         }
 
+        public bool ExistePorNombre(List<Pelicula> peli_List, string nombre)
+        {
+            return peli_List.Where(x => x.Nombre == nombre).ToList().Count > 0;
+        }
     }
 }

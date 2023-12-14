@@ -1,0 +1,20 @@
+DIBUJA'S BUSTER
+ARRIENDO - VIDEOCLUB
+
+----------------------------------
+CLIENTE:
+Nombre: Paulo Lara
+Edad: 20
+Dirreción: 27 Norte 201
+Telefono: 979599872
+----------------------------------
+Item Código  Título                         Valor      
+1    PV015   Fortnite                       $6500      
+Item Código  Título                         Valor      
+1    PV003   Tetris                         $6500      
+Item Código  Título                         Valor      
+1    PV025   Super Mario Odyssey            $6500      
+
+Total: $ 19500
+----------------------------------
+Tipo de Servicio: Compra

@@ -47,4 +47,4 @@ PP046;El Clan;2015;Crimen;R;110;4
 PP047;Un Lugar en Silencio;2018;Terror;PG13;90;6
 PP048;El Hoyo;2019;Ciencia Ficción;NC17;94;5
 PP049;El Árbol de la Sangre;2018;Romance;NC17;130;4
-PP050;Roma;2018;Drama;R;135;6
+PP050;Los Simpson: La película;2007;Animación;PG13;87;4
