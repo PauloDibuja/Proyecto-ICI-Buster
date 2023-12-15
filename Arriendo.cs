@@ -18,5 +18,19 @@ namespace BlockBuster{
                 this.arriendos.Add(codigo.Trim());
             }
         }
+
+        public string? Nombre{
+            get {return this.nombre;}
+            set {this.nombre = value;}
+        }
+
+        public List<string> Arriendos{
+            get {return this.arriendos;}
+        }
+
+        public string? FechaArriendo{
+            get {return this.fechaArriendo;}
+            set {this.fechaArriendo = value;}
+        }
     }
 }

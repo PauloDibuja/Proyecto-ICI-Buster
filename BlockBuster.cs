@@ -18,6 +18,14 @@ namespace BlockBuster{
             this.copias = copias;
         }
 
+        public Productos(){
+            this.codigo = "";
+            this.nombre = "";
+            this.anio = -1;
+            this.genero = "";
+            this.copias = -1;
+        }
+
         public string? Codigo{
             get { return codigo; }
             set { codigo = value; }
@@ -39,5 +47,7 @@ namespace BlockBuster{
             get{return copias;}
             set{copias = value;}
         }
+
+        public abstract void ImprimirDetalles();
     }
 }

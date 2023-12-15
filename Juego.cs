@@ -23,5 +23,16 @@ namespace BlockBuster{
             get { return esrb_rating; }
             set { esrb_rating = value; }
         }
+
+        public override void ImprimirDetalles(){
+            Console.WriteLine("----------------------------");
+            Console.WriteLine($"Código: {this.Codigo}");
+            Console.WriteLine($"Título: {this.Nombre}");
+            Console.WriteLine($"        Año: {this.Anio}");
+            Console.WriteLine($"        Género: {this.Genero}");
+            Console.WriteLine($"        Copias Disponibles: {this.Copias}");
+            Console.WriteLine($"        Plataforma: {this.Plataforma}");
+            Console.WriteLine($"        Clasificación: {this.ESRB_Rating}");
+        }
     }
 }

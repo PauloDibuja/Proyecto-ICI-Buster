@@ -1,8 +1,8 @@
-PV001;Super Mario Bros.;1985;Plataformas;eC;NES (Nintendo Entertainment System);10
-PV002;The Legend of Zelda;1986;Acción-Aventura;eC;NES (Nintendo Entertainment System);8
+PV001;Super Mario Bros.;1985;Plataformas;eC;NES (Nintendo Entertainment System);9
+PV002;The Legend of Zelda;1986;Acción-Aventura;eC;NES (Nintendo Entertainment System);7
 PV003;Tetris;1984;Puzzle;eC;Game Boy;6
-PV004;Street Fighter II;1991;Lucha;T;SNES (Super Nintendo Entertainment System);7
-PV005;Sonic the Hedgehog;1991;Plataformas;eC;Sega Genesis;9
+PV004;Street Fighter II;1991;Lucha;T;SNES (Super Nintendo Entertainment System);6
+PV005;Sonic the Hedgehog;1991;Plataformas;eC;Sega Genesis;8
 PV006;Mortal Kombat;1992;Lucha;M;Sega Genesis;11
 PV007;Final Fantasy VII;1997;RPG;T;PlayStation;10
 PV008;Metal Gear Solid;1998;Acción-Aventura;M;PlayStation;8
@@ -17,7 +17,7 @@ PV016;Among Us;2018;Multijugador;E10;iOS;6
 PV017;Minecraft;2011;Sandbox;E10;Xbox One;11
 PV018;Overwatch;2016;Disparos en primera persona;T;PlayStation 4;9
 PV019;The Witcher 3: Wild Hunt;2015;RPG;M;PC;12
-PV020;Dark Souls;2011;Acción-RPG;M;Xbox 360;7
+PV020;Dark Souls;2011;Acción-RPG;M;Xbox 360;10
 PV021;God of War;2018;Acción-Aventura;M;PlayStation 4;10
 PV022;Portal;2007;Disparos en primera persona;T;PC;8
 PV023;Persona 5;2016;RPG;M;PlayStation 4;9
@@ -31,8 +31,8 @@ PV030;Call of Duty: Black Ops Cold War;2020;Disparos en primera persona;M;PlaySt
 PV031;Ghost of Tsushima;2020;Acción-Aventura;M;PlayStation 4;8
 PV032;Super Mario 3D World + Bowser's Fury;2021;Plataformas;E;Nintendo Switch;10
 PV033;Ratchet & Clank: Rift Apart;2021;Acción-Aventura;E10;PlayStation 5;8
-PV034;Resident Evil Village;2021;Survival Horror;M;Xbox Series X;9
-PV035;Hitman 3;2021;Sigilo;M;PlayStation 5;6
+PV034;Resident Evil Village;2021;Survival Horror;M;Xbox Series X;8
+PV035;Hitman 3;2021;Sigilo;M;PlayStation 5;5
 PV036;Deathloop;2021;Acción;M;PC;7
 PV037;Psychonauts 2;2021;Plataformas;T;Xbox Series X;10
 PV038;Marvel's Guardians of the Galaxy;2021;Acción-Aventura;T;PlayStation 5;9

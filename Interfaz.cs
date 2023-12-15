@@ -1,3 +1,4 @@
+
 using System;
 using Rating;
 using BlockBuster;
@@ -9,16 +10,6 @@ namespace BlockBusterUI
 {
     class Interfaz
     {
-
-        public void ImprimirDetalles(Pelicula producto){
-            Console.WriteLine($"        Duración: {producto.Duracion} min");
-            Console.WriteLine($"        Clasificación: {producto.MPA_Rating}");
-        }
-        public void ImprimirDetalles(Juego producto){
-            Console.WriteLine($"        Plataforma: {producto.Plataforma} min");
-            Console.WriteLine($"        Clasificación: {producto.ESRB_Rating}");
-        }
-
         public void ImprimirPagina(List<Productos> productos, int pagina_actual){
             Console.Clear();
             int index_elemento_inicial = pagina_actual * 4;
@@ -27,23 +18,15 @@ namespace BlockBusterUI
             for (int i = index_elemento_inicial; i < index_elemento_final; i++)
             {
                 Productos producto = productos[i];
-                Console.WriteLine("----------------------------");
-                Console.WriteLine($"Código: {producto.Codigo}");
-                Console.WriteLine($"Título: {producto.Nombre}");
-                Console.WriteLine($"        Año: {producto.Anio}");
-                Console.WriteLine($"        Género: {producto.Genero}");
-                Console.WriteLine($"        Copias Disponibles: {producto.Copias}");
-                if (producto is Pelicula) ImprimirDetalles((Pelicula)producto);
-                if (producto is Juego) ImprimirDetalles((Juego)producto);
+                producto.ImprimirDetalles();
             }
             Console.WriteLine("----------------------------");
         }
-
-        public void Enpaginado(Dictionary<string, Productos> productos){
+        public void Enpaginado(Inventario inventario){
             int pagina_actual = 0;
-            int cantidad_paginas = productos.Count % 4 == 0 ? productos.Count / 4 : (productos.Count / 4) + 1;
+            int cantidad_paginas = inventario.ListaProductos.Count % 4 == 0 ? inventario.ListaProductos.Count / 4 : (inventario.ListaProductos.Count / 4) + 1;
             List<Productos> listaParaMenu = new List<Productos>();
-            ImprimirPagina(productos.Values.ToList(), pagina_actual);
+            ImprimirPagina(inventario.ListaProductos.Values.ToList(), pagina_actual);
             while (true)
             {
                 Console.WriteLine("Utilice las flechas <- y -> para desplazarse en el inventario. Presione Esc para salir.");
@@ -52,13 +35,13 @@ namespace BlockBusterUI
                 {
                     pagina_actual++;
                     pagina_actual = Math.Clamp(pagina_actual, 0, cantidad_paginas - 1);
-                    ImprimirPagina(productos.Values.ToList(), pagina_actual);
+                    ImprimirPagina(inventario.ListaProductos.Values.ToList(), pagina_actual);
                 }
                 else if (tecla.Key == ConsoleKey.LeftArrow)
                 {
                     pagina_actual--;
                     pagina_actual = Math.Clamp(pagina_actual, 0, cantidad_paginas - 1);
-                    ImprimirPagina(productos.Values.ToList(), pagina_actual);
+                    ImprimirPagina(inventario.ListaProductos.Values.ToList(), pagina_actual);
                 }
                 else if (tecla.Key == ConsoleKey.Escape)
                 {
@@ -66,12 +49,6 @@ namespace BlockBusterUI
                 }
             }
         }
-
-
-
-        // Funcionamiento
-
-        
     }
 
     class Funcionamiento{
@@ -104,9 +81,8 @@ namespace BlockBusterUI
             }
             return opcion;
         }
-
-        // Ingresar Datos CLiente
-
+        
+        // Sobrecarga de Métodos (+ Función lambda)
         public string IngresarDatosCliente(Func<char, bool> function, string mensaje1, string mensaje2, string mensaje3){
             string? textoSolicitado;
             do{
@@ -153,16 +129,9 @@ namespace BlockBusterUI
             }while(textoSolicitado == null || textoSolicitado == "");
             return textoSolicitado;
         }
-        public string IngresarDatosCliente(string mensaje){
-            string? textoSolicitado;
-            Console.Write($"{mensaje}\n>> ");
-                textoSolicitado = Console.ReadLine();
-                if(textoSolicitado == null || textoSolicitado == ""){
-                    imprimirSeparador();
-                    return "-";
-                }
-            return textoSolicitado;
-        }
+        // Fin Sobrecarga de Métodos
+        
+        
         public void imprimirSeparador(){
             Console.WriteLine("----------------------------------------------------------------");
         }
@@ -183,7 +152,7 @@ namespace BlockBusterUI
             string telefonoCliente = IngresarDatosCliente(@"^(\+56)?9\d{8}$",
                                                     "Ingrese su telefono. Formato: +569-------- o  9--------",
                                                     "Por favor, escriba su telefono.",
-                                                    "Escriba bien su RUT. Formato: +569-------- o  9--------");
+                                                    "Escriba bien su telefono. Formato: +569-------- o  9--------");
             imprimirSeparador();
             string direccionCliente = IngresarDatosCliente("Ingrese su dirección.",
                                                          "Por favor, ingrese su dirección.");
@@ -197,9 +166,6 @@ namespace BlockBusterUI
             imprimirSeparador();
             return;
         }
-
-        // Métodos Complementarios
-
         public bool Si_O_No(){
             string? respuesta = "";
             Console.WriteLine("Responda S (Si) o  N (No).\n");
@@ -234,8 +200,7 @@ namespace BlockBusterUI
             imprimirSeparador();
             return confirma;
         }
-
-        public List<Productos> ElegirProductosCarrito(Dictionary<string, Productos> inventario){
+        public List<Productos> ElegirProductosCarrito(Inventario inventario){
             List<Productos> carrito = new List<Productos>();
             string? codigoIngresado = "";
             bool seguirConElCarrito = true;
@@ -251,16 +216,16 @@ namespace BlockBusterUI
                     Console.WriteLine("Por favor, ingrese a algo.");
                     continue;
                 }
-                if (inventario.ContainsKey(codigoIngresado))
+                if (inventario.ListaProductos.ContainsKey(codigoIngresado))
                 {
                     imprimirSeparador();
-                    bool confirmacion = ConfirmarProducto(inventario[codigoIngresado]);
+                    bool confirmacion = ConfirmarProducto(inventario.ListaProductos[codigoIngresado]);
                     if(confirmacion){
-                        if(inventario[codigoIngresado].Copias <= 0){
+                        if(inventario.ListaProductos[codigoIngresado].Copias <= 0){
                             Console.WriteLine("Lo siento, no tenemos copias de ese producto.\n");
                         }else{
                             Console.WriteLine("Perfecto, añadido al carrito.\n");
-                            carrito.Add(inventario[codigoIngresado]);
+                            carrito.Add(inventario.ListaProductos[codigoIngresado]);
                         }
                     }
                 }else{
@@ -275,55 +240,135 @@ namespace BlockBusterUI
             }
             return carrito;
         }
-
         public int ImprimirPrecioFinal(List<Productos> carrito){
             int total = 0;
             imprimirSeparador();
             Console.WriteLine("Excelente, esto es lo que tienes en el carrito: \n");
             foreach(var producto in carrito){
-                Console.WriteLine($"{producto.Codigo, -7}{producto.Nombre, -20}$ 6500");
+                Console.WriteLine($"{producto.Codigo, -7}{producto.Nombre, -35}$ 6500");
                 total += 6500;
             }
             imprimirSeparador();
             Console.WriteLine($"Total: $ {total}");
             return total;
         }
-
-        public void ArrendarProducto(Dictionary<string, Productos> inventario, Cliente cliente) {
-            List<Productos> carrito = ElegirProductosCarrito(inventario);
-            int total = ImprimirPrecioFinal(carrito);
+        public void Pago(int total){
             IMetodoPago metodoUsado = ManejarTipoPago();
             int vuelto = 0;
-            if(metodoUsado is Efectivo) vuelto = ManejarEfectivo(total);
-            Boleta boleta = new Boleta();
-            Dictionary<string, Arriendo> arriendos = new Dictionary<string, Arriendo>();
-            string ultimoCodigo = arriendos.Keys.Last().Replace("A", "");
-            int proximoCódigo;
-            if(ultimoCodigo == null || ultimoCodigo == "") proximoCódigo = 0;
-            try{
-                proximoCódigo = Convert.ToInt32(ultimoCodigo) + 1;
-            } catch (FormatException){
-                proximoCódigo = 0;
+            if(metodoUsado is Efectivo){
+                vuelto = ManejarEfectivo(total);
+                imprimirSeparador();
+                Console.WriteLine($"Excelente, su vuelto es de $ {vuelto}");
             }
-            boleta.ImprimirBoleta(cliente, carrito, total, true, proximoCódigo);
-            //cliente.Pagar(total, metodoUsado);
         }
+        public void PrepararRegistro(List<Productos> carrito, Cliente cliente, string codigoRegistro, Dictionary<string, Arriendo> arriendos){
+            List<string> codigosArrendados = new List<string>();
+            foreach(var producto in carrito){
+                if(producto.Codigo == null || producto.Codigo == "") continue;
+                codigosArrendados.Add(producto.Codigo);
+            }
+            DateTime date = DateTime.Today;
+            if(cliente.Nombre == null || cliente.Nombre == "") cliente.Nombre = "No Especificdo";
+            Arriendo nuevoArriendo = new Arriendo(cliente.Nombre, string.Join(',', codigosArrendados), date.AddDays(7));
+            Console.WriteLine($"Su código para devolver el(los) producto(s) es: {codigoRegistro}");
+            Console.WriteLine($"Usted debe devolver el(los) producto(s) el día: {date.AddDays(7).ToString("dd-MM-yyyy")}");
+            arriendos.Add(codigoRegistro, nuevoArriendo);
+            EscribirArriendos(arriendos);
+        }
+        public void ProducirBoleta(Dictionary<string, Arriendo> arriendos, bool es_arriendo, Cliente cliente, List<Productos> carrito, int total){
+            Boleta boleta = new Boleta();
+            int proximoCódigo = -1;
+            string codigoString = "";
+            if(es_arriendo){
+                if(arriendos.Count > 0){
+                    string ultimoCodigo = arriendos.Last().Key.Replace("A", "");
+                    if(ultimoCodigo == null || ultimoCodigo == "") proximoCódigo = 0;
+                    try{
+                        proximoCódigo = Convert.ToInt32(ultimoCodigo) + 1;
+                    } catch (FormatException){
+                        proximoCódigo =0;
+                    }
+                }else proximoCódigo = 0;
+                codigoString = $"A{proximoCódigo.ToString().PadLeft(3, '0')}";
+                PrepararRegistro(carrito, cliente, codigoString, arriendos);
+            }
+            boleta.ImprimirBoleta(cliente, carrito, total, es_arriendo, proximoCódigo);
+        }
+        public void ArrendarProducto(Inventario inventario, Cliente cliente) {
+            List<Productos> carrito = ElegirProductosCarrito(inventario);
+            if(carrito.Count == 0) return;
+            int total = ImprimirPrecioFinal(carrito);
+            Pago(total);
+            Quitar_del_Inventario(inventario, carrito);
+            Dictionary<string, Arriendo> arriendos = LeerArriendos();
+            ProducirBoleta(arriendos, true, cliente, carrito, total);
+    
+        }
+        public int ConsultarTipo(){
+            int tipo = -1;
+            Console.WriteLine("¿Qué tipo de producto quiere que le recomiende?\n");
+            Console.WriteLine("[0] - Película");
+            Console.WriteLine("[1] - Juego\n");
+            while(tipo < 0  || tipo > 1){
+                Console.Write(">> ");
+                try{
+                    tipo = Convert.ToInt32(Console.ReadLine());
+                }catch(FormatException){
+                    Console.WriteLine("Ingrese un número, por favor.");
+                }
+            }
+            return tipo;
+        }
+        public List<Juego> JuegosElegidos(Inventario inv){
+            List<Juego> listado = new List<Juego>();
+            foreach(var element in inv.ListaProductos){
+                if(element.Value is Juego) listado.Add((Juego)element.Value);
+            }      
+            return listado;
+        }
+        public List<Pelicula> PeliculasElegidas(Inventario inv){
+            List<Pelicula> listado = new List<Pelicula>();
+            foreach(var element in inv.ListaProductos){
+                if(element.Value is Pelicula) listado.Add((Pelicula)element.Value);
+            }      
+            return listado;
+        }
+        public void RecomendarProducto(Inventario inventario){
+            // Preguntar el tipo de producto
+            Random random = new Random();
+            int valorRandom;
+            int tipo = ConsultarTipo();
+            List<Pelicula> peliculas;
+            List<Juego> juegos;
+            if(tipo == 0){
+                peliculas = PeliculasElegidas(inventario);
+                valorRandom = random.Next(peliculas.Count);
+                Console.WriteLine($"Pues, yo le recomiendo la película {peliculas[valorRandom].Nombre}, del año {peliculas[valorRandom].Anio}. A lo mejor le interesa.");
+            }
+            else if(tipo == 1){
+                juegos = JuegosElegidos(inventario);
+                valorRandom = random.Next(juegos.Count);
+                Console.WriteLine($"Pues, yo le recomiendo un videojuego llamado {juegos[valorRandom].Nombre}, está para {juegos[valorRandom].Plataforma}. A lo mejor le interesa.");
+            }
+            return;
 
-        public void ComprarProducto(Dictionary<string, Productos> inventario, Cliente cliente){
+        }
+        public void ComprarProducto(Inventario inventario, Cliente cliente){
             imprimirSeparador();
             List<Productos> carrito = ElegirProductosCarrito(inventario);
+            if(carrito.Count == 0) return;
             int total = ImprimirPrecioFinal(carrito);
-            IMetodoPago metodoUsado = ManejarTipoPago();
-            int vuelto = 0;
-            if(metodoUsado is Efectivo) vuelto = ManejarEfectivo(total);
+            Pago(total);
+            imprimirSeparador();
+            Quitar_del_Inventario(inventario, carrito);
             Boleta boleta = new Boleta();
             boleta.ImprimirBoleta(cliente, carrito, total, false);
+            Console.WriteLine("Ha concretado su compra con éxito.");
+            imprimirSeparador();
         }
-
         public Dictionary<string, Arriendo> LeerArriendos(){
             string? linea;
             Dictionary<string, Arriendo> arriendos = new Dictionary<string, Arriendo>();
-            
             try{
                 StreamReader sr = new StreamReader(".\\data\\RegistroArriendos.txt");
                 linea = sr.ReadLine();
@@ -331,10 +376,9 @@ namespace BlockBusterUI
                 while (linea != null){
                     string[] datos;
                     datos = linea.Split(";");
-
                     if (datos.Length == 4){
-                        //Arriendo arriendo = new Arriendo();
-                        //arriendos..Add(datos[0],arriendo));
+                        Arriendo arriendo = new Arriendo(datos[1], datos[2], DateTime.Parse(datos[3]));
+                        arriendos.Add(datos[0], arriendo);
                     }
                     linea = sr.ReadLine();
                 }
@@ -342,23 +386,78 @@ namespace BlockBusterUI
             }catch{
 
             }
-
-
-
-
             return arriendos;
         }
-
-        public void DevolverProducto(Dictionary<string, Productos> inventario, Dictionary<string, Arriendo> arriendos){
-            
+        public void EscribirArriendos(Dictionary<string, Arriendo> arriendos){
+            using(StreamWriter registro = new StreamWriter(".\\data\\RegistroArriendos.txt")){
+                foreach(var linea_registro in arriendos){
+                    Arriendo arriendo = linea_registro.Value;
+                    registro.WriteLine($"{linea_registro.Key};{arriendo.Nombre};{string.Join(',', arriendo.Arriendos)};{arriendo.FechaArriendo}");
+                }
+            }
         }
+        
+        
+        // Aplicamos sobrecarga de operadores aquí (Implementación en clase Inventario)
+        public void Devolver_a_Inventario(Inventario inventario, Arriendo arriendo){
+            foreach(var codigo in arriendo.Arriendos){
+                // Aplicacion de la sobrecarga de operador 
+                inventario += codigo;
+            }
+        }
+        public void Quitar_del_Inventario(Inventario inventario, List<Productos> carrito){
+            foreach(var producto in carrito){
+                if(producto.Codigo == null || producto.Codigo == "") continue;
+                // Aplicacion de la sobrecarga de operador 
+                inventario -= producto.Codigo;
+            }
+        }
+        // Fin Aplicacion de la sobrecarga de operador 
 
 
+        public void RespuestaAnteFecha(Arriendo arriendo){
+            imprimirSeparador();
+            DateTime fecha = DateTime.Today.Date;
+            if(arriendo.FechaArriendo == null) return;
+            DateTime devolucion = DateTime.Parse(arriendo.FechaArriendo).Date;
+            if (fecha < devolucion){
+                Console.WriteLine("OHHH, lo entregaste antes. Muy bien.");
+            }else if(fecha == devolucion){
+                Console.WriteLine("Excelente, lo entrego a tiempo. Muy bien.");
+            }else{
+                int dias_diferencia = fecha.Subtract(devolucion).Days;
+                Console.WriteLine($"Oiga, lo acaba de entregar con {dias_diferencia} días de diferencia. Le vamos a poner una multa.");
+                Console.WriteLine($"Serían $ 500 x día = $ {dias_diferencia * 500}");
+                Pago(dias_diferencia * 500);
+                Console.WriteLine("No lo vuelva a hacer. Sea más resposable.");
+            }
+            imprimirSeparador();
+        }
+        public void DevolverProducto(Inventario inventario, Cliente cliente){
+            Dictionary<string, Arriendo> arriendos = LeerArriendos();
+            string? codigoDevolver;
+            while (true){
+                try{
+                    Console.Write("Ingrese su codigo para devolver el/los productos\n\n>> ");
+                    codigoDevolver = Console.ReadLine();
 
-
-        // Métodos de Pago
-
-         public IMetodoPago ManejarTipoPago(){
+                    if (codigoDevolver == "" || codigoDevolver == null){
+                        Console.WriteLine("Ingrese bien el codigo!");
+                        continue;
+                    }
+                    if (arriendos.ContainsKey(codigoDevolver)){
+                        Devolver_a_Inventario(inventario, arriendos[codigoDevolver]);
+                        RespuestaAnteFecha(arriendos[codigoDevolver]);
+                        arriendos.Remove(codigoDevolver);
+                        Console.WriteLine("Productos devueltos correctamente!");
+                        break;
+                    }
+                }finally{
+                }
+            }
+            EscribirArriendos(arriendos);
+        }
+        public IMetodoPago ManejarTipoPago(){
             Console.WriteLine("¿Cómo cancela?");
 
             Console.WriteLine("[0] - Efectivo");
@@ -393,7 +492,6 @@ namespace BlockBusterUI
             }
             return new Efectivo();      // Retorna el metodo de efectivo por defecto. (En rara ocasión pasará por este return)
         }
-
         public int ManejarEfectivo(int monto){
             imprimirSeparador();
             int montoDado = 0;

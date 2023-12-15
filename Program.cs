@@ -9,6 +9,8 @@ class Program{
      // Métodos Principales
 
     static void Main(string[] args){
+        Console.WriteLine("BIENVENIDO A DIBUJA'S BUSTER");
+        Console.WriteLine("El local donde puedes alquilar entretenimiento a precio de unos lápices.");
         Inventario inventario = new Inventario();
         Funcionamiento funcionamiento = new Funcionamiento();
         Interfaz interfaz = new Interfaz();
@@ -17,29 +19,36 @@ class Program{
         //interfaz.Enpaginado(inventario.ListaProductos);
         int peticion;
         do{
+            funcionamiento.imprimirSeparador();
             peticion = funcionamiento.ElegirMetodo();
             switch(peticion){
                 case 0:
-                    funcionamiento.ArrendarProducto(inventario.ListaProductos, cliente);
+                    funcionamiento.ArrendarProducto(inventario, cliente);
                     break;
                 case 1:
-                    funcionamiento.ComprarProducto(inventario.ListaProductos, cliente);
+                    funcionamiento.ComprarProducto(inventario, cliente);
                     break;
                 case 2:
                     // Devolver
+                    funcionamiento.DevolverProducto(inventario, cliente);
                     break;
                 case 3:
                     // Ver Productos
+                    interfaz.Enpaginado(inventario);
                     break;
                 case 4:
                     // Recomendar Producto
+                    funcionamiento.RecomendarProducto(inventario);
                     break;
                 default:
                     break;
             }
+            inventario.ActualizarArchivoInventario();
+            funcionamiento.imprimirSeparador();
         }while(peticion != 5);
 
-        
+        Console.WriteLine("Está bien, nos vemos luego. Que tenga un excelente día. :D");
+        funcionamiento.imprimirSeparador();
         // 2 devolver
 
         

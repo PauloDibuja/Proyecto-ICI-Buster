@@ -6,20 +6,6 @@ namespace BlockBuster{
         private int edad;
         private string? direccion;
         private string? telefono;
-
-
-
-        public void arrendar(){
-
-        }
-
-        public void devolver(){
-
-        }
-
-        public void comprar(){
-
-        }
         
         public string? Nombre{
             get {return this.nombre;}

@@ -1,4 +1,4 @@
-PP001;El Padrino;1972;Drama;R;175;10
+PP001;El Padrino;1972;Drama;R;175;13
 PP002;Star Wars: Episodio IV - Una nueva esperanza;1977;Ciencia Ficción;PG;121;8
 PP003;E.T. el Extraterrestre;1982;Aventura;PG;115;6
 PP004;Blade Runner;1982;Cine Negro;R;117;5
@@ -26,15 +26,15 @@ PP025;Pantera Negra;2018;Superhéroes;PG13;134;10
 PP026;Roma;2018;Drama;R;135;6
 PP027;Bohemian Rhapsody;2018;Biografía;PG13;134;7
 PP028;Parasite;2019;Drama;R;132;6
-PP029;Joker;2019;Thriller Psicológico;R;122;8
-PP030;1917;2019;Bélica;R;119;5
+PP029;Joker;2019;Thriller Psicológico;R;122;7
+PP030;1917;2019;Bélica;R;119;8
 PP031;Soul;2020;Animación;PG;100;7
 PP032;Tenet;2020;Ciencia Ficción;PG13;150;9
 PP033;Nomadland;2020;Drama;R;107;6
-PP034;Minari;2020;Drama;PG13;115;5
+PP034;Minari;2020;Drama;PG13;115;4
 PP035;Una Mujer Fantástica;2017;Drama;R;104;4
 PP036;La Casa de Papel;2017;Crimen;NC17;70;3
-PP037;El Ciudadano Ilustre;2016;Comedia Dramática;R;118;5
+PP037;El Ciudadano Ilustre;2016;Comedia Dramática;R;118;4
 PP038;El Ángel;2018;Crimen;R;118;6
 PP039;No Manches Frida;2016;Comedia;PG13;100;4
 PP040;El Secreto de sus Ojos;2009;Thriller;R;129;7
@@ -46,5 +46,5 @@ PP045;Diarios de Motocicleta;2004;Biografía;R;126;5
 PP046;El Clan;2015;Crimen;R;110;4
 PP047;Un Lugar en Silencio;2018;Terror;PG13;90;6
 PP048;El Hoyo;2019;Ciencia Ficción;NC17;94;5
-PP049;El Árbol de la Sangre;2018;Romance;NC17;130;4
+PP049;El Árbol de la Sangre;2018;Romance;NC17;130;3
 PP050;Los Simpson: La película;2007;Animación;PG13;87;4

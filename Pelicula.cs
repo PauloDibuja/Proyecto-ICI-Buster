@@ -26,5 +26,16 @@ namespace BlockBuster{
         {
             return peli_List.Where(x => x.Nombre == nombre).ToList().Count > 0;
         }
+
+        public override void ImprimirDetalles(){
+            Console.WriteLine("----------------------------");
+            Console.WriteLine($"Código: {this.Codigo}");
+            Console.WriteLine($"Título: {this.Nombre}");
+            Console.WriteLine($"        Año: {this.Anio}");
+            Console.WriteLine($"        Género: {this.Genero}");
+            Console.WriteLine($"        Copias Disponibles: {this.Copias}");
+            Console.WriteLine($"        Duración: {this.Duracion} min");
+            Console.WriteLine($"        Clasificación: {this.MPA_Rating}");
+        }
     }
 }

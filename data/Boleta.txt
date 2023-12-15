@@ -3,18 +3,19 @@ ARRIENDO - VIDEOCLUB
 
 ----------------------------------
 CLIENTE:
-Nombre: Paulo Lara
+Nombre: Paulo
 Edad: 20
-Dirreción: 27 Norte 201
+Dirreción: lol 123
 Telefono: 979599872
 ----------------------------------
 Item Código  Título                         Valor      
-1    PV015   Fortnite                       $6500      
+1    PP034   Minari                         $6500      
 Item Código  Título                         Valor      
-1    PV003   Tetris                         $6500      
+1    PP029   Joker                          $6500      
 Item Código  Título                         Valor      
-1    PV025   Super Mario Odyssey            $6500      
+1    PV035   Hitman 3                       $6500      
 
 Total: $ 19500
 ----------------------------------
-Tipo de Servicio: Compra
+Tipo de Servicio: Arriendo
+Orden de Arriendo: A003
