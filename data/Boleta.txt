@@ -5,17 +5,13 @@ ARRIENDO - VIDEOCLUB
 CLIENTE:
 Nombre: Paulo
 Edad: 20
-Dirreción: lol 123
+Dirreción: 27 Norte 190
 Telefono: 979599872
 ----------------------------------
 Item Código  Título                         Valor      
-1    PP034   Minari                         $6500      
-Item Código  Título                         Valor      
-1    PP029   Joker                          $6500      
-Item Código  Título                         Valor      
-1    PV035   Hitman 3                       $6500      
+1    PP050   Los Simpson: La película       $6500      
 
-Total: $ 19500
+Total: $ 6500
 ----------------------------------
 Tipo de Servicio: Arriendo
-Orden de Arriendo: A003
+Orden de Arriendo: A004

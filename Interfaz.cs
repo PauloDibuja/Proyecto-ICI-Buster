@@ -240,13 +240,13 @@ namespace BlockBusterUI
             }
             return carrito;
         }
-        public int ImprimirPrecioFinal(List<Productos> carrito){
+        public int ImprimirPrecioFinal(List<Productos> carrito, int precio){
             int total = 0;
             imprimirSeparador();
             Console.WriteLine("Excelente, esto es lo que tienes en el carrito: \n");
             foreach(var producto in carrito){
-                Console.WriteLine($"{producto.Codigo, -7}{producto.Nombre, -35}$ 6500");
-                total += 6500;
+                Console.WriteLine($"{producto.Codigo, -7}{producto.Nombre, -35}$ {precio}");
+                total += precio;
             }
             imprimirSeparador();
             Console.WriteLine($"Total: $ {total}");
@@ -294,10 +294,10 @@ namespace BlockBusterUI
             }
             boleta.ImprimirBoleta(cliente, carrito, total, es_arriendo, proximoCódigo);
         }
-        public void ArrendarProducto(Inventario inventario, Cliente cliente) {
+        public void ArrendarProducto(Inventario inventario, Cliente cliente, int precio) {
             List<Productos> carrito = ElegirProductosCarrito(inventario);
             if(carrito.Count == 0) return;
-            int total = ImprimirPrecioFinal(carrito);
+            int total = ImprimirPrecioFinal(carrito, precio);
             Pago(total);
             Quitar_del_Inventario(inventario, carrito);
             Dictionary<string, Arriendo> arriendos = LeerArriendos();
@@ -353,11 +353,11 @@ namespace BlockBusterUI
             return;
 
         }
-        public void ComprarProducto(Inventario inventario, Cliente cliente){
+        public void ComprarProducto(Inventario inventario, Cliente cliente, int precio){
             imprimirSeparador();
             List<Productos> carrito = ElegirProductosCarrito(inventario);
             if(carrito.Count == 0) return;
-            int total = ImprimirPrecioFinal(carrito);
+            int total = ImprimirPrecioFinal(carrito, precio);
             Pago(total);
             imprimirSeparador();
             Quitar_del_Inventario(inventario, carrito);

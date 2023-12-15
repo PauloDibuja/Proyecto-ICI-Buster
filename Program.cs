@@ -16,6 +16,8 @@ class Program{
         Interfaz interfaz = new Interfaz();
         Cliente cliente = new Cliente();
         funcionamiento.ObtenerDatosCliente(cliente);
+        int precioArriendo = 6500;
+        int precioVenta = 6500; 
         //interfaz.Enpaginado(inventario.ListaProductos);
         int peticion;
         do{
@@ -23,10 +25,10 @@ class Program{
             peticion = funcionamiento.ElegirMetodo();
             switch(peticion){
                 case 0:
-                    funcionamiento.ArrendarProducto(inventario, cliente);
+                    funcionamiento.ArrendarProducto(inventario, cliente, precioArriendo);
                     break;
                 case 1:
-                    funcionamiento.ComprarProducto(inventario, cliente);
+                    funcionamiento.ComprarProducto(inventario, cliente, precioVenta);
                     break;
                 case 2:
                     // Devolver

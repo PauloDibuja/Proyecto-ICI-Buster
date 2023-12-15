@@ -24,7 +24,7 @@ PV023;Persona 5;2016;RPG;M;PlayStation 4;9
 PV024;Animal Crossing: New Horizons;2020;Simulación social;E;Nintendo Switch;10
 PV025;Super Mario Odyssey;2017;Plataformas;E10;Nintendo Switch;11
 PV026;Cyberpunk 2077;2020;RPG;M;Xbox One;8
-PV027;Valorant;2020;Disparos en primera persona;T;PC;10
+PV027;Valorant;2020;Disparos en primera persona;T;PC;9
 PV028;Assassin's Creed: Valhalla;2020;Acción-Aventura;M;PlayStation 5;7
 PV029;FIFA 21;2020;Deportes;E;Xbox Series X;9
 PV030;Call of Duty: Black Ops Cold War;2020;Disparos en primera persona;M;PlayStation 5;12
@@ -44,7 +44,7 @@ PV043;Death Stranding;2019;Aventura;M;PlayStation 4;9
 PV044;Watch Dogs: Legion;2020;Acción-Aventura;M;Xbox Series X;6
 PV045;Cyber Shadow;2021;Plataformas;T;Nintendo Switch;8
 PV046;Hades;2020;Roguelike;T;PC;10
-PV047;Hitman 2;2018;Sigilo;M;PlayStation 4;11
+PV047;Hitman 2;2018;Sigilo;M;PlayStation 4;10
 PV048;The Last of Us Part II;2020;Acción-Aventura;M;PlayStation 4;8
 PV049;Horizon Zero Dawn;2017;Acción-Aventura;T;PlayStation 4;9
 PV050;Control;2019;Acción-Aventura;M;Xbox One;7
